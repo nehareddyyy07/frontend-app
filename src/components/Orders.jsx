@@ -8,10 +8,11 @@ function Orders() {
 
   const fetchOrders = async () => {
     try {
-      const url = `${API_URL}/orders/${user.email}`;
+      const url = `${API_URL}/orders`;
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${user.token}` },
       });
+      console.log(response.data);   // add this
       setOrders(response.data);
     } catch (err) {
       console.log("Something went wrong");

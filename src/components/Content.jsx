@@ -26,7 +26,7 @@ function Content() {
     }
   };
 
-  return (
+return (
     <div>
       <div className="row">
         {products.map((product) => (
